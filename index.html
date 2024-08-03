@@ -264,12 +264,10 @@
 	<table align=center width=850px>
 		<center><h1>Challenge</h1></center>
 			<tr>
-				<td>
-				1) Decentralized attribution -  No Provable method for attributing user-specific contents w/o re-training a centralized classifier on ever growing user base.
+				<td>	
+				1) Challenge 1: Poor tradeoff among robust attribution accuracy, generation quality, and key capacity from existing watermarking methods, even for known attacks and models.
 				<br>
-				2) System tradeoff - No system-level study on the trade-off among robust attribution (against adversarial de-attribution), generation quality, and the capacity of attributable models.
-				<br>
-				3) Data privacy - Scalable secure training of generative models cannot be achieved due to limitations of secure multiplication of encrypted values and nonlinear activation/loss functions.
+				2) Challenge 2: Poor tradeoff between training security and scalability from existing secure training methods: DP training does not achieve data reconstruction hardness; MPC is too costly to scale. 
 				</td>
 			</tr>
 	</table>
@@ -312,9 +310,35 @@
 		<center>
 			<tr>
 				<td>
-					1) Certification of decentralized attribution - Sufficient conditions derived for content-space watermarking to achieve certifiable decentralized attribution, enabling effective watermarking for images and audios (ICLR2021, ICASSSP2022). Large robust attribution-generation quality tradeoff observed.
+					1) Contribution 1: Discovered latent fingerprints in image generation models that naturally serve as watermarks, with a good balance among attribution accuracy, generation quality, and key capacity. (ICML 2023)
 					<br>
-					2) A generic solution that enables secure computation over multiple databases, and is applicable to privacy-preserving training of generative models (AsiaCrypt2021).  Baseline implementation of secure GAN.
+					2) Contribution 2: Developed polyspectrum based latent watermarks for latent diffusion models with further improved accuracy-quality-capacity balance. (In preparation)
+				</td>
+			</tr>
+		</center>
+	</table>
+	<be>
+
+		<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:450px" src="./resources/method.png"/>
+					Figure 2. Cosine threshold of content-space watermarking and examples. (Left, Middle) Watermarks w/ sufficient cosine-distance guarantees attributability.
+					(Right) Three attributable watermarks on StyleGAN.
+					</td>
+
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td>
+					1) Contribution 3: Developed an MPC-friendly Support Vector Regression (SVR) with performance improvements of 4-340 times compared to existing work (CCS 2024).
+					<br>
+					2) Contribution 4: Developed a hybrid MPC training protocol that improves secure training cost by up to 16 times from standard MPC, with provable reconstruction hardness. (In review)
 				</td>
 			</tr>
 		</center>
@@ -328,9 +352,9 @@
 		<center>
 			<tr>
 				<td>
-					1) New computational soln. to the open challenge of optimal packing - Packing non-convex objects (model distributions) via controlled transport of latent ellipsoids.
+					1) Better understanding of the intrinsic accuracy-quality-capacity tradeoffs of watermarks through the lens of polyspectrum (a complete rep. of non-Gaussian random fields) 
 					<br>
-					2) New functionality &#45; Private Join and Compute. New cryptographic primitive &#45; private information retrieval (PIR) with default.
+					2) New functionality – Private Join and Compute. A New non-linear regression algorithm designed for MPC applications.
 				</td>
 			</tr>
 		</center>
@@ -343,9 +367,9 @@
 		<center>
 			<tr>
 				<td>
-					1) Social - Address threats, especially to underrepresented groups, from malicious personation (generative DeepFake) and biased data/model applications (racial biases).
+					1) Social - Address threats, especially to underrepresented groups, from malicious personation (generative DeepFake) and biased data/model applications. 
 					<br>
-					2) National security - Secure training on cloud for manufacturing network.
+					2) National security - Secure training on scientific data (e.g., for manufacturing network).
 					<br>
 					3) Education and outreach - Cross-disciplinary course materials on cyber-security, generative models, and optimization theory. High-school research engagement through ASU SCENE program.
 				</td>
